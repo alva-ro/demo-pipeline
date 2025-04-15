@@ -1,5 +1,5 @@
 from django.http import JsonResponse
+from datetime import datetime
 
-# Create your views here.
 def ping(request):
-    return JsonResponse({'ping': 'pong'})
+    return JsonResponse({'ping': 'pong', 'date': datetime.now().isoformat()})
